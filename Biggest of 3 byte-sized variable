@@ -1,0 +1,16 @@
+MOV AL, A
+    CMP AL, B
+    JG L1
+    MOV AL, B
+    
+    L1: CMP AL, C
+    JG L2
+    MOV AL, C
+    L2: MOV BIG, AL
+
+HLT
+
+    A DB 10H
+    B DB 15H
+    C DB 17H
+    BIG DB ?
